@@ -1,0 +1,17 @@
+# Build output
+build/
+out/
+cmake-build-*/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+
+# Benchmark output and images (keep the scripts, not the generated data)
+bench/results/
+*.csv
+
+# OS files
+.DS_Store
+Thumbs.db
