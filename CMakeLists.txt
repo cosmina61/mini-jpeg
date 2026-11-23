@@ -15,7 +15,11 @@ if(MJPEG_ENABLE_CUDA)
     set(CMAKE_CUDA_STANDARD 17)
 endif()
 
+add_library(mjpeg_core src/color.cpp)
+target_include_directories(mjpeg_core PUBLIC src)
+
 add_executable(mjpeg src/main.cpp)
+target_link_libraries(mjpeg PRIVATE mjpeg_core)
 
 enable_testing()
 add_subdirectory(tests)
